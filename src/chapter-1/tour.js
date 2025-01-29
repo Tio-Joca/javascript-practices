@@ -156,6 +156,73 @@ function main ()    {
     }
 
     console.log(points.dist() + '\n');
+
+    function abs (x)    {
+        if (x >= 0) {
+            return x;
+        }   else    {
+            return -x;
+        }
+    }
+
+    console.log((abs(4) === abs(-4)) + '\n');
+
+    function sumOfValues (vector)   {
+        let sum = 0;
+        for (let x of vector)   {
+            sum += x;
+        }
+
+        return sum;
+    }
+
+    let values = [1, 2, 3, 4, 5, 6];
+
+    console.log(sumOfValues(values) + '\n');
+
+    function factorial (x)  {
+        if (x === 0 ^ x === 1)  {
+            return 1;
+        }   else    {
+            let aux = x - 1;
+            while (aux >= 2)    {
+                x *= aux--;
+            }
+
+            return x;
+        }
+    }
+
+    console.log(factorial(5));
+
+    function factorialAlt (x)   {
+        if (x === 0 ^ x === 1)  {
+            return 1;
+        }   else    {
+            for (let aux = x - 1; aux >= 2; aux--)  {
+                x *= aux;
+            }
+
+            return x;
+        }
+    }
+
+    console.log(factorialAlt(0) + '\n');
+
+    class Points    {
+        constructor (x, y)  {
+            this.x = x;
+            this.y = y;
+        }
+        distance () {
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+        }
+    }
+
+    let dots = new Points (34, -65);
+
+    console.log(dots);
+    console.log(dots.distance() + '\n');
 }
 
 main();
