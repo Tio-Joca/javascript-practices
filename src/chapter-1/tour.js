@@ -1,6 +1,6 @@
 function main ()    {
     // Introduction to simple variables
-    let a, b, c;
+    let a;
 
     a = 10;
     console.log(a);
@@ -61,24 +61,101 @@ function main ()    {
     console.log(empty.length + '\n');
 
     // Simple usage of arrays and objects
+    let points = [
+        {x : 2, y : 10},
+        {x : -12, y : -2}
+    ];
 
-    a = 123;
-    b = 27;
+    let data = {
+        trial1 : [[1, 2], [3, 4]],
+        trial2 : [[2, 3], [4, 5]]
+    };
 
-    c = a + b;
-    console.log(c);
-    c = a - b;
-    console.log(c);
-    c = a * b;
-    console.log(c);
-    c = a / b;
-    console.log(c);
+    console.log(points);
+    console.log(data.trial2);
+    console.log(data.trial2 + '\n');
+
+    // Operands and operators
+    console.log(3 + 2);
+    console.log(3 - 2);
+    console.log(3 * 2);
+    console.log((3 / 2) + '\n');
+
+    console.log('3' + '2' + '\n');
+
+    console.log((points[1].x - points[0].x) + '\n');
     
-    c = 0;
-    console.log(c++);
-    console.log(++c);
-    console.log(c--);
-    console.log(--c);
+    let count = 0;
+    console.log(count++);
+    console.log(++count);
+    console.log(count--);
+    console.log((--count) + '\n');
+
+    let b = 2, c = 3;
+
+    console.log(b < c);
+    console.log(b <= c);
+    console.log(b >= c);
+    console.log(b > c);
+    console.log(b === c);
+    console.log((b !== c) + '\n');
+
+    console.log(!(b < c));
+    console.log(!(b <= c));
+    console.log(!(b >= c));
+    console.log(!(b > c));
+    console.log(!(b === c));
+    console.log((! (b !== c)) + '\n');
+
+    console.log("two" === "three");
+    console.log("two" > "three");
+    console.log((false === (b === c)) + '\n');
+
+    console.log((b === 2) && (c === 3));
+    console.log((b > 3) || (c < 3));
+    console.log((!(b === c)) + '\n');
+
+    // Introduction to functions
+
+    function addOne (x) {
+        return x + 1;
+    }
+
+    b = addOne(b);
+    console.log(b + '\n');
+
+    const square = function (x)   {
+        return x * x;
+    };
+
+    c = square(c);
+    console.log(c + '\n');
+
+    const addTwo = x => x + 2;
+    const cube = x => x * x * x;
+
+    b = addTwo(c);
+    console.log(b + '\n');
+
+    c = cube(b);
+    console.log(c + '\n');
+
+    let vector = [];
+    vector.push(12, 24, 36);
+    console.log(vector);
+    vector.reverse();
+    console.log(vector + '\n');
+
+    points.dist = function ()   {
+        let p1 = this[0];
+        let p2 = this[1];
+        let e = p2.x - p1.x;
+        let f = p2.y - p1.y;
+
+        return Math.sqrt((e * e) + (f * f));
+    }
+
+    console.log(points.dist() + '\n');
 }
 
 main();
