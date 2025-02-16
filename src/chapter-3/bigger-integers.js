@@ -81,4 +81,3 @@ console.log(2n == 2);
 console.log(2n === 2);
 console.log(2n != 2);
 console.log(2n !== 2);
-console.log(Date.now());

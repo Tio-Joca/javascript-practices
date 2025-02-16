@@ -209,6 +209,8 @@ function main ()    {
 
     console.log(factorialAlt(0) + '\n');
 
+    // Introduction to classes
+
     class Points    {
         constructor (x, y)  {
             this.x = x;
