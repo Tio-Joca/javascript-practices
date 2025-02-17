@@ -2,9 +2,9 @@
 
 /*
     To represent and store a character or text in JavaScript, we need to
-    use the string type to create a string value. This can be possible
-    putting the desired character or text within single quotes, double
-    quotes or backticks pairs.
+    use the string type to create a string value. This is possible putting
+    the desired character or text within a matched pair of single quotes,
+    double quotes or backticks pairs.
 */
 console.log('a');
 console.log("papaya");
@@ -15,8 +15,11 @@ console.log(`Gabriela is the love of life\n`);
 
     A string can have single quotes, double quotes or backticks within
     This is possible if you choose one of these characters as a string
-    delimiter. If you did your choice, you are free to use the other two
+    delimiter. Once you did your choice, you are free to use the other two
     characters in your string without restrictions.
+
+    Otherwise, you can use escape sequences (\', \" or \`) to use these
+    characters, even if you use then as a string delimiter.
 */
 console.log('"Some `random` text."');
 console.log("'Some `random` text.'");
@@ -48,12 +51,12 @@ console.log(y + '\n');
     Strings with multiple lines
 
     If you want to store longer strings that will have more than one
-    line, you can store the string with backsticks. If you do this,
+    line, you can store the string with backticks. If you did this,
     just press the enter button when you want the current line ends
     and start the string new line.
 
-    Otherwise, you can use new line character (\n) to make a line
-    break in your string.
+    Otherwise, you can use new line escape sequence (\n) to make a
+    line break in your string.
 */
 
 let a = `JavaScript
